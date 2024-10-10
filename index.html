@@ -5,13 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artyom Ashigov - Data Analyst / Scientist</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <style>
+        /* Sticky Footer Flexbox */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 0 5rem; /* Add padding to the bottom for visibility */
+            flex: 1;
         }
 
         header {
@@ -36,13 +50,6 @@
             font-weight: 300;
         }
 
-        .container {
-            width: 80%;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem 0;
-        }
-
         .about, .skills, .projects, .contact {
             margin-bottom: 3rem;
             text-align: center;
@@ -56,10 +63,6 @@
 
         .about p {
             line-height: 1.6;
-        }
-
-        .skills {
-            text-align: center;
         }
 
         .skills h3 {
@@ -149,12 +152,36 @@
             background-color: #555;
         }
 
+        .cv-link {
+            text-align: center;
+            font-size: 1rem;
+            margin-top: -2rem;
+            color: #333;
+        }
+
+        .cv-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .cv-link a:hover {
+            color: #0056b3;
+        }
+
         footer {
             text-align: center;
             padding: 1rem 0;
             background-color: #222;
             color: #fff;
             font-size: 0.9rem;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         footer a {
@@ -194,20 +221,20 @@
     </style>
 </head>
 <body>
-    <header>
+    <header data-aos="fade-down">
         <h1>Artyom Ashigov - Data Analyst / Scientist</h1>
         <h2>Portfolio</h2>
         <p>Python | SQL | Tableau | Power BI</p>
     </header>
 
     <div class="container">
-        <section class="about">
+        <section class="about" data-aos="fade-up">
             <h2>About Me</h2>
             <p>I’m Artyom, a data analyst based in Yerevan with five years of experience across trading, banking, iGaming, and online media. I specialize in using Python, SQL, and data visualization tools like Tableau and Power BI to turn complex data into actionable insights. My technical skills include MySQL, PostgreSQL, BigQuery, and experience with AWS for data engineering and cloud solutions. I’m also proficient in web scraping and automation with tools like BeautifulSoup.</p>
             <p>I recently completed a Master’s in Business Analytics at CEU, focusing on data science and machine learning. Open to remote, onsite, or hybrid roles worldwide, I’m eager to collaborate on consulting, freelance, or project-based opportunities where data can drive impactful solutions.</p>
         </section>
 
-        <section class="skills">
+        <section class="skills" data-aos="fade-up">
             <h2>Technical Skills</h2>
             
             <h3>Programming Languages and Statistical Software</h3>
@@ -260,7 +287,7 @@
             </div>
         </section>
 
-        <section class="projects">
+        <section class="projects" data-aos="fade-up">
             <h2>Projects</h2>
             <div class="project">
                 <h3>CRM Metrics Dashboard</h3>
@@ -274,14 +301,21 @@
             </div>
         </section>
 
-        <section class="contact">
+        <section class="contact" data-aos="fade-up">
             <h2>Schedule a Call</h2>
             <p>If you're interested in freelancing or consulting opportunities, feel free to schedule a call with me:</p>
             <a href="https://calendly.com/ashigovartyom/discussion" target="_blank">Schedule a Call on Calendly</a>
         </section>
+        
+        <div class="cv-link" data-aos="fade-up">
+            <p>If you still would like to get my CV, <a href="https://drive.google.com/file/d/1c0FVWKwGXg2Wy6QukdVvPqcMW-j2uy3U/view?usp=sharing" target="_blank">click here to download it</a>.</p>
+        </div>
+        <div class="cv-link" data-aos="fade-up">
+            <p>If you still would like to get my CV, <a href="https://drive.google.com/file/d/1c0FVWKwGXg2Wy6QukdVvPqcMW-j2uy3U/view?usp=sharing" target="_blank">click here to download it</a>.</p>
+        </div>
     </div>
 
-    <footer>
+    <footer data-aos="fade-up">
         <p>&copy; 2024 Artyom Ashigov | 
             <a href="mailto:artyomashigov@gmail.com">artyomashigov@gmail.com</a> | 
             <a href="https://linkedin.com/in/artyom-ashigov" target="_blank">
@@ -289,5 +323,21 @@
             </a>
         </p>
     </footer>
+
+    <!-- AOS JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+
+        let footer = document.querySelector('footer');
+
+        window.addEventListener('scroll', () => {
+            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 10) {
+                footer.style.opacity = '1';
+            } else {
+                footer.style.opacity = '0';
+            }
+        });
+    </script>
 </body>
 </html>
