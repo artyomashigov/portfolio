@@ -3,57 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artyom Ashigov - Data Analyst/Scientist</title>
+    <title>Artyom Ashigov - Data Analyst / Scientist</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
+
         header {
-            background-color: #333;
+            background-color: #222;
             color: #fff;
-            padding: 1rem 0;
+            padding: 2rem 0;
             text-align: center;
         }
+
         header h1 {
             margin: 0;
+            font-size: 2.5rem;
         }
+
+        header h2 {
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+        }
+
+        header p {
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
         .container {
             width: 80%;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 2rem 0;
         }
-        .about, .projects, .contact {
-            margin-bottom: 2rem;
+
+        .about, .skills, .projects, .contact {
+            margin-bottom: 3rem;
+            text-align: center;
         }
+
+        .about h2, .skills h2, .projects h2, .contact h2 {
+            font-size: 2rem;
+            color: #222;
+            margin-bottom: 1rem;
+        }
+
+        .about p {
+            line-height: 1.6;
+        }
+
+        .skills {
+            text-align: center;
+        }
+
+        .skills h3 {
+            font-size: 1.1rem;
+            color: #000;
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+            text-align: center;
+        }
+
+        .skills .skill-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .skills .skill-badge {
+            background-color: #007bff;
+            color: #fff;
+            padding: 0.3rem 0.6rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+
+        .skills .skill-badge:hover {
+            background-color: #0056b3;
+        }
+
         .projects h2, .contact h2 {
-            color: #333;
+            color: #222;
+            font-size: 2rem;
+            margin-bottom: 1rem;
         }
+
         .project {
             background-color: #fff;
-            padding: 1rem;
-            margin-bottom: 1rem;
+            padding: 1.5rem;
+            margin: 1rem 0;
             border: 1px solid #ddd;
-            border-radius: 5px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
+
+        .project:hover {
+            transform: scale(1.05);
+        }
+
         .project h3 {
-            margin: 0;
+            font-size: 1.5rem;
+            color: #333;
+            margin: 0 0 0.5rem;
         }
+
+        .project p {
+            margin: 0.5rem 0 1rem;
+            line-height: 1.5;
+        }
+
+        .project a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .project a:hover {
+            color: #0056b3;
+        }
+
         .contact a {
             display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: #333;
+            padding: 0.75rem 1.5rem;
+            background-color: #222;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
         }
+
+        .contact a:hover {
+            background-color: #555;
+        }
+
         footer {
             text-align: center;
             padding: 1rem 0;
-            background-color: #333;
+            background-color: #222;
             color: #fff;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer img {
+            vertical-align: middle;
+            width: 20px;
+            margin-left: 10px;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header h2 {
+                font-size: 1.3rem;
+            }
+
+            .about h2, .skills h2, .projects h2, .contact h2 {
+                font-size: 1.7rem;
+            }
         }
     </style>
 </head>
@@ -63,33 +199,95 @@
         <h2>Portfolio</h2>
         <p>Python | SQL | Tableau | Power BI</p>
     </header>
+
     <div class="container">
         <section class="about">
             <h2>About Me</h2>
             <p>I’m Artyom, a data analyst based in Yerevan with five years of experience across trading, banking, iGaming, and online media. I specialize in using Python, SQL, and data visualization tools like Tableau and Power BI to turn complex data into actionable insights. My technical skills include MySQL, PostgreSQL, BigQuery, and experience with AWS for data engineering and cloud solutions. I’m also proficient in web scraping and automation with tools like BeautifulSoup.</p>
             <p>I recently completed a Master’s in Business Analytics at CEU, focusing on data science and machine learning. Open to remote, onsite, or hybrid roles worldwide, I’m eager to collaborate on consulting, freelance, or project-based opportunities where data can drive impactful solutions.</p>
         </section>
+
+        <section class="skills">
+            <h2>Technical Skills</h2>
+            
+            <h3>Programming Languages and Statistical Software</h3>
+            <div class="skill-row">
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">R programming</span>
+                <span class="skill-badge">SQL</span>
+                <span class="skill-badge">IBM SPSS Statistics</span>
+                <span class="skill-badge">Eviews</span>
+            </div>
+            
+            <h3>Database Software</h3>
+            <div class="skill-row">
+                <span class="skill-badge">MySQL</span>
+                <span class="skill-badge">MSSQL</span>
+                <span class="skill-badge">BigQuery</span>
+                <span class="skill-badge">PostgreSQL</span>
+                <span class="skill-badge">MongoDB</span>
+            </div>
+
+            <h3>Data Analysis</h3>
+            <div class="skill-row">
+                <span class="skill-badge">Python (Pandas, Numpy, Math)</span>
+                <span class="skill-badge">R Studio</span>
+                <span class="skill-badge">Microsoft Excel</span>
+                <span class="skill-badge">Power BI</span>
+            </div>
+
+            <h3>Data Visualization</h3>
+            <div class="skill-row">
+                <span class="skill-badge">Power BI</span>
+                <span class="skill-badge">Tableau</span>
+                <span class="skill-badge">Data Studio</span>
+                <span class="skill-badge">Qlik</span>
+                <span class="skill-badge">Python (Plotly, Matplotlib, Seaborn)</span>
+            </div>
+
+            <h3>Data Engineering</h3>
+            <div class="skill-row">
+                <span class="skill-badge">Knime</span>
+                <span class="skill-badge">Postman API</span>
+                <span class="skill-badge">MySQL</span>
+                <span class="skill-badge">AWS</span>
+                <span class="skill-badge">Databricks</span>
+            </div>
+
+            <h3>Web Scraping</h3>
+            <div class="skill-row">
+                <span class="skill-badge">Python (Requests, BeautifulSoup, Selenium)</span>
+            </div>
+        </section>
+
         <section class="projects">
             <h2>Projects</h2>
             <div class="project">
-                <h3>Project 1: CRM Metrics Dashboard</h3>
+                <h3>CRM Metrics Dashboard</h3>
                 <p>Developed a comprehensive dashboard to track CRM metrics using Tableau, integrating data from MySQL and PostgreSQL databases.</p>
-                <a href="https://github.com/artyomashigov">View on GitHub</a>
+                <a href="https://github.com/artyomashigov" target="_blank">View on GitHub</a>
             </div>
             <div class="project">
-                <h3>Project 2: Sales Analysis with Python</h3>
+                <h3>Sales Analysis with Python</h3>
                 <p>Analyzed sales data using Python and Pandas to identify trends, anomalies, and insights for decision-making.</p>
-                <a href="https://github.com/artyomashigov">View on GitHub</a>
+                <a href="https://github.com/artyomashigov" target="_blank">View on GitHub</a>
             </div>
         </section>
+
         <section class="contact">
             <h2>Schedule a Call</h2>
             <p>If you're interested in freelancing or consulting opportunities, feel free to schedule a call with me:</p>
             <a href="https://calendly.com/ashigovartyom/discussion" target="_blank">Schedule a Call on Calendly</a>
         </section>
     </div>
+
     <footer>
-        <p>&copy; 2024 Artyom Ashigov</p>
+        <p>&copy; 2024 Artyom Ashigov | 
+            <a href="mailto:artyomashigov@gmail.com">artyomashigov@gmail.com</a> | 
+            <a href="https://linkedin.com/in/artyom-ashigov" target="_blank">
+                <img src="linkedin.webp" alt="LinkedIn">
+            </a>
+        </p>
     </footer>
 </body>
 </html>
