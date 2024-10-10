@@ -50,12 +50,12 @@
             font-weight: 300;
         }
 
-        .about, .skills, .projects, .contact {
+        .about, .skills, .projects, .contact, .cv-section {
             margin-bottom: 3rem;
             text-align: center;
         }
 
-        .about h2, .skills h2, .projects h2, .contact h2 {
+        .about h2, .skills h2, .projects h2, .contact h2, .cv-section h2 {
             font-size: 2rem;
             color: #222;
             margin-bottom: 1rem;
@@ -93,12 +93,6 @@
 
         .skills .skill-badge:hover {
             background-color: #0056b3;
-        }
-
-        .projects h2, .contact h2 {
-            color: #222;
-            font-size: 2rem;
-            margin-bottom: 1rem;
         }
 
         .project {
@@ -152,22 +146,30 @@
             background-color: #555;
         }
 
-        .cv-link {
+        .cv-section {
             text-align: center;
-            font-size: 1rem;
-            margin-top: -2rem;
-            color: #333;
+            padding: 2rem 0;
+            background-color: #f9f9f9;
+            margin-top: 2rem;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
         }
 
-        .cv-link a {
+        .cv-link {
+            display: inline-block;
+            font-size: 1.1rem;
             color: #007bff;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s;
+            transition: color 0.3s, background-color 0.3s;
+            padding: 0.5rem 1rem;
+            border: 2px solid #007bff;
+            border-radius: 5px;
         }
 
-        .cv-link a:hover {
-            color: #0056b3;
+        .cv-link:hover {
+            color: #fff;
+            background-color: #007bff;
         }
 
         footer {
@@ -214,7 +216,7 @@
                 font-size: 1.3rem;
             }
 
-            .about h2, .skills h2, .projects h2, .contact h2 {
+            .about h2, .skills h2, .projects h2, .contact h2, .cv-section h2 {
                 font-size: 1.7rem;
             }
         }
@@ -230,8 +232,8 @@
     <div class="container">
         <section class="about" data-aos="fade-up">
             <h2>About Me</h2>
-            <p>I’m Artyom, a data analyst based in Yerevan with five years of experience across trading, banking, iGaming, and online media. I specialize in using Python, SQL, and data visualization tools like Tableau and Power BI to turn complex data into actionable insights. My technical skills include MySQL, PostgreSQL, BigQuery, and experience with AWS for data engineering and cloud solutions. I’m also proficient in web scraping and automation with tools like BeautifulSoup.</p>
-            <p>I recently completed a Master’s in Business Analytics at CEU, focusing on data science and machine learning. Open to remote, onsite, or hybrid roles worldwide, I’m eager to collaborate on consulting, freelance, or project-based opportunities where data can drive impactful solutions.</p>
+            <p>I'm Artyom, a data analyst based in Yerevan with five years of experience across trading, banking, iGaming, and online media. I specialize in using Python, SQL, and data visualization tools like Tableau and Power BI to turn complex data into actionable insights. My technical skills include MySQL, PostgreSQL, BigQuery, and experience with AWS for data engineering and cloud solutions. I'm also proficient in web scraping and automation with tools like BeautifulSoup.</p>
+            <p>I recently completed a Master's in Business Analytics at CEU, focusing on data science and machine learning. Open to remote, onsite, or hybrid roles worldwide, I'm eager to collaborate on consulting, freelance, or project-based opportunities where data can drive impactful solutions.</p>
         </section>
 
         <section class="skills" data-aos="fade-up">
@@ -307,12 +309,11 @@
             <a href="https://calendly.com/ashigovartyom/discussion" target="_blank">Schedule a Call on Calendly</a>
         </section>
         
-        <div class="cv-link" data-aos="fade-up">
-            <p>If you still would like to get my CV, <a href="https://drive.google.com/file/d/1c0FVWKwGXg2Wy6QukdVvPqcMW-j2uy3U/view?usp=sharing" target="_blank">click here to download it</a>.</p>
-        </div>
-        <div class="cv-link" data-aos="fade-up">
-            <p>If you still would like to get my CV, <a href="https://drive.google.com/file/d/1c0FVWKwGXg2Wy6QukdVvPqcMW-j2uy3U/view?usp=sharing" target="_blank">click here to download it</a>.</p>
-        </div>
+        <section class="cv-section" data-aos="fade-up">
+            <h2>Download My CV</h2>
+            <p>Interested in learning more about my professional experience?</p>
+            <a class="cv-link" href="https://drive.google.com/file/d/1c0FVWKwGXg2Wy6QukdVvPqcMW-j2uy3U/view?usp=sharing" target="_blank">Download CV</a>
+        </section>
     </div>
 
     <footer data-aos="fade-up">
