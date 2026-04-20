@@ -3,251 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artyom Ashigov - Data Analyst / Scientist</title>
+    <title>Artyom Ashigov - Data Analyst & Analytics Engineer</title>
+    <meta name="description" content="Portfolio of Artyom Ashigov, a data analyst and analytics engineer specializing in business analytics, BI dashboards, data workflows, and ML projects.">
+    <meta property="og:title" content="Artyom Ashigov - Data Analyst & Analytics Engineer">
+    <meta property="og:description" content="Business, product, and financial analytics portfolio with dashboards, data pipelines, and machine learning projects.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="linkedin.webp">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Artyom Ashigov - Data Analyst & Analytics Engineer">
+    <meta name="twitter:description" content="Business, product, and financial analytics portfolio with dashboards, data pipelines, and machine learning projects.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <style>
-        /* Sticky Footer Flexbox */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        .container {
-            width: 80%;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem 0 5rem; /* Add padding to the bottom for visibility */
-            flex: 1;
-        }
-
-        header {
-            background-color: #222;
-            color: #fff;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        header h2 {
-            font-size: 1.5rem;
-            margin: 0.5rem 0;
-        }
-
-        header p {
-            font-size: 1rem;
-            font-weight: 300;
-        }
-
-        .about, .skills, .projects, .contact, .cv-section {
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-
-        .about h2, .skills h2, .projects h2, .contact h2, .cv-section h2 {
-            font-size: 2rem;
-            color: #222;
-            margin-bottom: 1rem;
-        }
-
-        .about p {
-            line-height: 1.6;
-        }
-
-        .skills h3 {
-            font-size: 1.1rem;
-            color: #000;
-            font-weight: bold;
-            margin-bottom: 0.3rem;
-            text-align: center;
-        }
-
-        .skills .skill-row {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 0.3rem;
-            margin-bottom: 1rem;
-        }
-
-        .skills .skill-badge {
-            background-color: #007bff;
-            color: #fff;
-            padding: 0.3rem 0.6rem;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            transition: background-color 0.3s;
-            text-align: center;
-        }
-
-        .skills .skill-badge:hover {
-            background-color: #0056b3;
-        }
-
-        .project {
-            background-color: #fff;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .projects .project[style] {
-            padding-top: 1.5rem !important;
-        }
-
-        .project > div[style*="position: absolute"] {
-            position: static !important;
-            display: flex !important;
-            justify-content: flex-end;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 1rem;
-        }
-
-        .project:hover {
-            transform: scale(1.05);
-        }
-
-        .project h3 {
-            font-size: 1.5rem;
-            color: #333;
-            margin: 0 0 0.5rem;
-        }
-
-        .project p {
-            margin: 0.5rem 0 1rem;
-            line-height: 1.5;
-        }
-
-        .project a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        .project a:hover {
-            color: #0056b3;
-        }
-
-        .contact a {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background-color: #222;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            transition: background-color 0.3s;
-        }
-
-        .contact a:hover {
-            background-color: #555;
-        }
-
-        .cv-section {
-            text-align: center;
-            padding: 2rem 0;
-            background-color: #f9f9f9;
-            margin-top: 2rem;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-        }
-
-        .cv-link {
-            display: inline-block;
-            font-size: 1.1rem;
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s, background-color 0.3s;
-            padding: 0.5rem 1rem;
-            border: 2px solid #007bff;
-            border-radius: 5px;
-        }
-
-        .cv-link:hover {
-            color: #fff;
-            background-color: #007bff;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #222;
-            color: #fff;
-            font-size: 0.9rem;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 1rem;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        footer img {
-            vertical-align: middle;
-            width: 20px;
-            margin-left: 10px;
-        }
-
-        /* Responsive styling */
-        @media (max-width: 768px) {
-            .container {
-                width: 90%;
-            }
-
-            header h1 {
-                font-size: 2rem;
-            }
-
-            header h2 {
-                font-size: 1.3rem;
-            }
-
-            .about h2, .skills h2, .projects h2, .contact h2, .cv-section h2 {
-                font-size: 1.7rem;
-            }
-
-            .project > div[style*="position: absolute"] {
-                justify-content: center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a class="nav-name" href="#top">Artyom Ashigov</a>
+            <div class="nav-links">
+                <a href="#about" class="active">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="#documents">Resume</a>
+            </div>
+        </div>
+    </nav>
+
     <header data-aos="fade-down">
-        <h1>Artyom Ashigov - Data Analyst / Scientist</h1>
-        <h2>Portfolio</h2>
-        <p>Python | SQL | Tableau | Power BI</p>
+        <h1 id="top">Artyom Ashigov</h1>
+        <h2>Data Analyst & Analytics Engineer</h2>
+        <p>I turn business, product, and financial data into decision-ready insights, dashboards, and automated data workflows.</p>
+        <div class="header-actions">
+            <a href="mailto:artyomashigov@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/artyom-ashigov" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/artyomashigov" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://calendly.com/ashigovartyom/discussion" target="_blank" rel="noopener noreferrer">Schedule a Call</a>
+        </div>
     </header>
 
     <div class="container">
-        <section class="about" data-aos="fade-up">
+        <section class="summary-strip" aria-label="Professional summary" data-aos="fade-up">
+            <div>
+                <strong>6+ years</strong>
+                <span>Analytics experience</span>
+            </div>
+            <div>
+                <strong>Finance, fintech, banking, iGaming</strong>
+                <span>Industry background</span>
+            </div>
+            <div>
+                <strong>Remote, hybrid, onsite</strong>
+                <span>Open worldwide</span>
+            </div>
+            <div>
+                <strong>South Florida</strong>
+                <span>Based in the U.S.</span>
+            </div>
+        </section>
+
+        <section class="about" id="about" data-aos="fade-up">
             <h2>About Me</h2>
             <p>I'm Artyom, a data analyst based in South Florida with 6+ years of experience across trading, banking, fintech, and iGaming. I work at the intersection of finance, marketing, and product analytics, turning complex data into strategic business decisions.</p>
 
@@ -258,7 +76,29 @@
             <p>I hold a dual-degree Master’s in Business Analytics (Austrian & U.S. accredited) from CEU, and I’m open to remote, onsite, or hybrid opportunities worldwide.</p>
         </section>
 
-        <section class="skills" data-aos="fade-up">
+        <section class="experience" id="experience" data-aos="fade-up">
+            <h2>Selected Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>Finance & Trading Analytics</h3>
+                    <p>Revenue, profitability, performance, and decision-support reporting across financial environments.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Customer & Product Analytics</h3>
+                    <p>Retention, cohort analysis, segmentation, ARPU, LTV, churn, CAC, and ROI reporting.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>BI & Executive Reporting</h3>
+                    <p>Dashboards and reporting workflows for leadership, marketing, product, and operations teams.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Automation & Data Workflows</h3>
+                    <p>ELT pipelines, cloud data workflows, API integrations, and repeatable analysis processes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills" id="skills" data-aos="fade-up">
             <h2>Technical Skills</h2>
             
             <h3>Programming Languages and Statistical Software</h3>
@@ -323,9 +163,19 @@
             </div>
         </section>
 
-        <section class="projects" data-aos="fade-up">
+        <section class="projects" id="projects" data-aos="fade-up">
             <h2>Projects</h2>
-                <div class="project" style="position: relative; padding-top: 2.1rem;">
+            <div class="project-filters" aria-label="Project filters">
+                <button class="project-filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+                <button class="project-filter" type="button" data-filter="Featured" aria-pressed="false">Featured</button>
+                <button class="project-filter" type="button" data-filter="Data Analytics" aria-pressed="false">Data Analytics</button>
+                <button class="project-filter" type="button" data-filter="Business Intelligence" aria-pressed="false">Business Intelligence</button>
+                <button class="project-filter" type="button" data-filter="Data Engineering" aria-pressed="false">Data Engineering</button>
+                <button class="project-filter" type="button" data-filter="Machine Learning" aria-pressed="false">Machine Learning</button>
+                <button class="project-filter" type="button" data-filter="MLOps" aria-pressed="false">MLOps</button>
+                <button class="project-filter" type="button" data-filter="DevOps" aria-pressed="false">DevOps</button>
+            </div>
+                <div class="project" data-featured="true" style="position: relative; padding-top: 2.1rem;">
         <div style="position: absolute; top: 18px; right: 24px; display: flex; gap: 8px;">
             <span style="font-size: 12px; font-weight: bold; background: #ecfdf5; color: #047857; border: 1px solid #6ee7b7; border-radius: 6px; padding: 6px 10px;">
                 Machine Learning
@@ -337,9 +187,9 @@
 
             <h3>Iris Species Predictor (ML in Production Project)</h3>
             <p>Built and deployed a simple ML app with <strong>Streamlit</strong>. Users can download a sample CSV, upload data, and get class probabilities plus the predicted Iris species.</p>
-            <a href="https://iris-model-aa.streamlit.app/" target="_blank">Live App</a>
+            <a href="https://iris-model-aa.streamlit.app/" target="_blank" rel="noopener noreferrer">Live App</a>
             <span> | </span>
-            <a href="https://github.com/artyomashigov/ml-in-prod" target="_blank">View on GitHub</a>
+            <a href="https://github.com/artyomashigov/ml-in-prod" target="_blank" rel="noopener noreferrer">View on GitHub</a>
         </div>
 
         <div class="project" style="position: relative; padding-top: 2.1rem;">
@@ -351,7 +201,7 @@
 
             <h3>Analysis of Stolen Vehicles in New Zealand</h3>
             <p>Performed data analysis in <strong>R programming language</strong> on stolen vehicle data from New Zealand. The project examined theft patterns by weekday, vehicle type, region, color, vehicle age, and population density, with visualizations and insights to support conclusions.</p>
-            <a href="https://rpubs.com/artyomashigov/stolen_vehicles" target="_blank">View Project Article</a>
+            <a href="https://rpubs.com/artyomashigov/stolen_vehicles" target="_blank" rel="noopener noreferrer">View Project Article</a>
         </div>
 
         <div class="project" style="position: relative; padding-top: 2.1rem;">
@@ -369,12 +219,12 @@
 
             <h3>CI/CD Pipeline with GitHub Actions and AWS EC2</h3>
             <p>Built a CI/CD project using <strong>GitHub Actions</strong>, a <strong>self-hosted runner on AWS EC2</strong>, <strong>Docker</strong>, <strong>FastAPI</strong>, and <strong>pytest</strong>. The pipeline automatically builds the app, runs tests, and redeploys the latest version to the server after each code push.</p>
-            <a href="https://medium.com/@artyomashigov/building-a-ci-cd-pipeline-with-github-actions-and-a-self-hosted-runner-on-aws-ec2-0e04dcc8e00f" target="_blank">View Project Article</a>
+            <a href="https://medium.com/@artyomashigov/building-a-ci-cd-pipeline-with-github-actions-and-a-self-hosted-runner-on-aws-ec2-0e04dcc8e00f" target="_blank" rel="noopener noreferrer">View Project Article</a>
             <span> | </span>
-            <a href="https://github.com/artyomashigov/ci_cd_test" target="_blank">View on GitHub</a>
+            <a href="https://github.com/artyomashigov/ci_cd_test" target="_blank" rel="noopener noreferrer">View on GitHub</a>
         </div>
 
-        <div class="project" style="position: relative; padding-top: 2.1rem;">
+        <div class="project" data-featured="true" style="position: relative; padding-top: 2.1rem;">
             <div style="position: absolute; top: 18px; right: 24px; display: flex; gap: 8px;">
                 <span style="font-size: 12px; font-weight: bold; background: #ecfdf5; color: #047857; border: 1px solid #6ee7b7; border-radius: 6px; padding: 6px 10px;">
                     Machine Learning
@@ -389,12 +239,12 @@
 
             <h3>Sentiment Analysis of the Top Armenian Banks</h3>
             <p>Developed a sentiment analysis project in <strong>Python</strong> using web scraping, <strong>AWS Translate</strong>, <strong>AWS Comprehend</strong>, and <strong>AWS S3</strong> to analyze news articles from leading Armenian banks. The project explored public sentiment across institutions through multilingual text processing, cloud-based analysis, and visualizations.</p>
-            <a href="https://medium.com/@artyomashigov/decoding-public-trust-sentiment-analysis-of-the-top-armenian-banks-f5544561f3bf" target="_blank">View Project Article</a>
+            <a href="https://medium.com/@artyomashigov/decoding-public-trust-sentiment-analysis-of-the-top-armenian-banks-f5544561f3bf" target="_blank" rel="noopener noreferrer">View Project Article</a>
             <span> | </span>
-            <a href="https://github.com/artyomashigov/armenian_top_banks" target="_blank">View on GitHub</a>
+            <a href="https://github.com/artyomashigov/armenian_top_banks" target="_blank" rel="noopener noreferrer">View on GitHub</a>
         </div>
 
-        <div class="project" style="position: relative; padding-top: 2.1rem;">
+        <div class="project" data-featured="true" style="position: relative; padding-top: 2.1rem;">
             <div style="position: absolute; top: 18px; right: 24px; display: flex; gap: 8px;">
                 <span style="font-size: 12px; font-weight: bold; background: #f0fdfa; color: #0f766e; border: 1px solid #5eead4; border-radius: 6px; padding: 6px 10px;">
                     Data Engineering
@@ -406,9 +256,9 @@
 
             <h3>Serverless Market Data Pipeline on AWS</h3>
             <p>Built an end-to-end <strong>serverless AWS data pipeline</strong> that ingests stock market data from an external API using <strong>AWS Lambda</strong>, stores raw JSON in <strong>Amazon S3</strong>, transforms nested data with <strong>AWS Glue</strong>, exposes curated Parquet data through <strong>Amazon Athena</strong>, and visualizes the final dataset in <strong>Power BI</strong>. The pipeline is orchestrated with <strong>AWS Step Functions</strong> and scheduled automatically with <strong>Amazon EventBridge</strong>.</p>
-            <a href="https://medium.com/@artyomashigov/end-to-end-aws-data-pipeline-lambda-glue-step-functions-and-athena-in-practice-b5a803b003af" target="_blank">View Project Article</a>
+            <a href="https://medium.com/@artyomashigov/end-to-end-aws-data-pipeline-lambda-glue-step-functions-and-athena-in-practice-b5a803b003af" target="_blank" rel="noopener noreferrer">View Project Article</a>
             <span> | </span>
-            <a href="https://github.com/artyomashigov/aws-market-data-pipeline" target="_blank">View on GitHub</a>
+            <a href="https://github.com/artyomashigov/aws-market-data-pipeline" target="_blank" rel="noopener noreferrer">View on GitHub</a>
         </div>
 
         <div class="project" style="position: relative; padding-top: 2.1rem;">
@@ -436,7 +286,7 @@
 
             <h3>UK Bank Customer Demographics & Financial Analysis</h3>
             <p>Developed an interactive <strong>Tableau</strong> dashboard with story-driven navigation to analyze customer demographics and financial behavior across UK regions. The project explored regional distribution, balance segmentation, age and gender patterns, and job classification to uncover insights into customer profiles. Implemented dynamic filters and storytelling views to highlight key trends such as regional demographic differences and customer segmentation.</p>
-            <a href="https://public.tableau.com/app/profile/artyom.ashigov/viz/UKBankCustomers_17350829750340/CustomerSegmentation" target="_blank">View Interactive Dashboard</a>
+            <a href="https://public.tableau.com/app/profile/artyom.ashigov/viz/UKBankCustomers_17350829750340/CustomerSegmentation" target="_blank" rel="noopener noreferrer">View Interactive Dashboard</a>
         </div>
 
         <div class="project" style="position: relative; padding-top: 2.1rem;">
@@ -451,7 +301,7 @@
 
             <h3>Bike Usage & Weather Impact Analysis</h3>
             <p>Built an interactive <strong>Tableau</strong> dashboard to analyze bike usage patterns, station activity, rider demographics, and weather impact. The project explored monthly trip trends, top stations by trip volume, geographic trip distribution, age distribution, and customer versus subscriber behavior to identify usage patterns and support operational insights.</p>
-            <a href="https://public.tableau.com/app/profile/artyom.ashigov/viz/DivvyBikeUsageWeatherImpactAnalysis/BikeUsageWeatherImpactAnalysis" target="_blank">View Interactive Dashboard</a>
+            <a href="https://public.tableau.com/app/profile/artyom.ashigov/viz/DivvyBikeUsageWeatherImpactAnalysis/BikeUsageWeatherImpactAnalysis" target="_blank" rel="noopener noreferrer">View Interactive Dashboard</a>
         </div>
 
         <div class="project" style="position: relative; padding-top: 2.1rem;">
@@ -466,32 +316,34 @@
 
             <h3>Operational & Pricing Analytics in Delivery Business</h3>
             <p>Completed a data analysis case study involving <strong>SQL</strong> querying and <strong>Tableau</strong> visualization to evaluate delivery performance, pricing behavior, and operational efficiency. Built a suite of interactive dashboards analyzing order volume, delivery time, pricing distribution, and store-level performance. Identified key insights such as peak demand hours, delivery time variability across stores, and pricing behavior across regions, supporting data-driven decision making.</p>
-            <a href="https://public.tableau.com/app/profile/artyom.ashigov/viz/DeliveryPerformance_16743182430800/OrderDeliveryPerformanceTrends" target="_blank">View Interactive Dashboards</a>
+            <a href="https://public.tableau.com/app/profile/artyom.ashigov/viz/DeliveryPerformance_16743182430800/OrderDeliveryPerformanceTrends" target="_blank" rel="noopener noreferrer">View Interactive Dashboards</a>
         </div>
 
         </section>
 
-        <section class="contact" data-aos="fade-up">
+        <section class="contact" id="contact" data-aos="fade-up">
             <h2>Schedule a Call</h2>
             <p>Interested in working together? Schedule a call with me.</p>
-            <a href="https://calendly.com/ashigovartyom/discussion" target="_blank">Schedule a Call on Calendly</a>
+            <a href="https://calendly.com/ashigovartyom/discussion" target="_blank" rel="noopener noreferrer">Schedule a Call on Calendly</a>
         </section>
         
-        <section class="cv-section" data-aos="fade-up">
-            <h2>Documents</h2>
+        <section class="cv-section" id="documents" data-aos="fade-up">
+            <h2>Resume & Certificates</h2>
             <p>Download my CV or view all professional certificates and completed courses.</p>
 
             <a class="cv-link" 
             href="https://drive.google.com/file/d/1c0FVWKwGXg2Wy6QukdVvPqcMW-j2uy3U/view?usp=sharing" 
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
                 Download CV
             </a>
 
             <span style="margin: 0 8px;"></span>
 
             <a class="cv-link" 
-            href="PASTE_YOUR_CERTIFICATES_FOLDER_LINK_HERE" 
-            target="_blank">
+            href="https://drive.google.com/drive/folders/1tQ3IFqDTGMRHFHj7Yji83UF6zdb9glLL?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer">
                 View Certificates
             </a>
         </section>
@@ -500,26 +352,16 @@
     <footer data-aos="fade-up">
         <p>&copy; 2026 Artyom Ashigov | 
             <a href="mailto:artyomashigov@gmail.com">artyomashigov@gmail.com</a> | 
-            <a href="https://linkedin.com/in/artyom-ashigov" target="_blank">
+            <a href="https://linkedin.com/in/artyom-ashigov" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
                 <img src="linkedin.webp" alt="LinkedIn">
             </a>
         </p>
     </footer>
 
+    <button class="back-to-top" type="button" aria-label="Back to top">Top</button>
+
     <!-- AOS JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init();
-
-        let footer = document.querySelector('footer');
-
-        window.addEventListener('scroll', () => {
-            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 10) {
-                footer.style.opacity = '1';
-            } else {
-                footer.style.opacity = '0';
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

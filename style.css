@@ -1,0 +1,496 @@
+/* Sticky Footer Flexbox */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0 5rem; /* Add padding to the bottom for visibility */
+    flex: 1;
+}
+
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.nav-inner {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.8rem 0;
+}
+
+.nav-name {
+    color: #222;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.8rem;
+}
+
+.nav-links a {
+    color: #333;
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+.nav-links a.active {
+    color: #007bff;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+header p {
+    max-width: 760px;
+    margin: 1rem auto 0;
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1.5rem;
+}
+
+.header-actions a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 0.65rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header-actions a:hover {
+    background-color: #fff;
+    color: #222;
+}
+
+.about, .experience, .skills, .projects, .contact, .cv-section {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.summary-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.summary-strip div {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.summary-strip strong,
+.summary-strip span {
+    display: block;
+}
+
+.summary-strip strong {
+    color: #222;
+    font-size: 1rem;
+    margin-bottom: 0.35rem;
+}
+
+.summary-strip span {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.about h2, .experience h2, .skills h2, .projects h2, .contact h2, .cv-section h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    line-height: 1.6;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+.experience-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.experience-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    color: #222;
+}
+
+.experience-card p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.skills h3 {
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    text-align: center;
+}
+
+.skills .skill-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.skills .skill-badge {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.skills .skill-badge:hover {
+    background-color: #0056b3;
+}
+
+.project-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0 0 1.5rem;
+}
+
+.project-filter {
+    color: #222;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    padding: 0.5rem 0.8rem;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.project-filter:hover,
+.project-filter.active {
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.project.is-hidden {
+    display: none;
+}
+
+.project {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.projects .project[style] {
+    padding-top: 1.5rem !important;
+}
+
+.project > div[style*="position: absolute"] {
+    position: static !important;
+    display: flex !important;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0 0 0.5rem;
+}
+
+.project p {
+    margin: 0.5rem 0 1rem;
+    line-height: 1.5;
+}
+
+.project > a {
+    display: inline-block;
+    color: #007bff;
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    padding: 0.5rem 0.8rem;
+    margin: 0.25rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.project > a:hover {
+    color: #fff;
+    background-color: #007bff;
+}
+
+.project > span {
+    display: none;
+}
+
+.contact a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.contact a:hover {
+    background-color: #555;
+}
+
+.cv-section {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+    margin-top: 2rem;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.cv-link {
+    display: inline-block;
+    font-size: 1.1rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 0.5rem 1rem;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+}
+
+.cv-link:hover {
+    color: #fff;
+    background-color: #007bff;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #222;
+    color: #fff;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer img {
+    vertical-align: middle;
+    width: 20px;
+    margin-left: 10px;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 1rem;
+    bottom: 4.5rem;
+    z-index: 11;
+    color: #fff;
+    background-color: #222;
+    border: 0;
+    border-radius: 5px;
+    padding: 0.65rem 0.85rem;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, background-color 0.3s;
+}
+
+.back-to-top.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.back-to-top:hover {
+    background-color: #555;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .nav-inner {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .summary-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .project-filters {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .project-filter {
+        flex: 0 0 auto;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header h2 {
+        font-size: 1.3rem;
+    }
+
+    .about h2, .experience h2, .skills h2, .projects h2, .contact h2, .cv-section h2 {
+        font-size: 1.7rem;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project > div[style*="position: absolute"] {
+        justify-content: center;
+    }
+}
+
+@media print {
+    .site-nav,
+    .header-actions,
+    .project-filters,
+    .contact,
+    footer,
+    .back-to-top {
+        display: none;
+    }
+
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+    }
+
+    .project,
+    .experience-card,
+    .summary-strip div {
+        box-shadow: none;
+        break-inside: avoid;
+    }
+}
