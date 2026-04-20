@@ -105,6 +105,19 @@
             transition: transform 0.3s ease;
         }
 
+        .projects .project[style] {
+            padding-top: 1.5rem !important;
+        }
+
+        .project > div[style*="position: absolute"] {
+            position: static !important;
+            display: flex !important;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 1rem;
+        }
+
         .project:hover {
             transform: scale(1.05);
         }
@@ -219,6 +232,10 @@
             .about h2, .skills h2, .projects h2, .contact h2, .cv-section h2 {
                 font-size: 1.7rem;
             }
+
+            .project > div[style*="position: absolute"] {
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -308,60 +325,150 @@
 
         <section class="projects" data-aos="fade-up">
             <h2>Projects</h2>
-            <div class="project">
-                <h3>Iris Species Predictor (ML in Production Project)</h3>
-                <p>Built and deployed a simple ML app with <strong>Streamlit</strong>. Users can download a sample CSV, upload data, and get class probabilities plus the predicted Iris species.</p>
-                <a href="https://iris-model-aa.streamlit.app/" target="_blank">Live App</a>
-                <span> | </span>
-                <a href="https://github.com/artyomashigov/ml-in-prod" target="_blank">View on GitHub</a>
+                <div class="project" style="position: relative; padding-top: 2.1rem;">
+        <div style="position: absolute; top: 18px; right: 24px; display: flex; gap: 8px;">
+            <span style="font-size: 12px; font-weight: bold; background: #ecfdf5; color: #047857; border: 1px solid #6ee7b7; border-radius: 6px; padding: 6px 10px;">
+                Machine Learning
+            </span>
+            <span style="font-size: 12px; font-weight: bold; background: #eff6ff; color: #1d4ed8; border: 1px solid #93c5fd; border-radius: 6px; padding: 6px 10px;">
+                MLOps
+            </span>
+        </div>
+
+            <h3>Iris Species Predictor (ML in Production Project)</h3>
+            <p>Built and deployed a simple ML app with <strong>Streamlit</strong>. Users can download a sample CSV, upload data, and get class probabilities plus the predicted Iris species.</p>
+            <a href="https://iris-model-aa.streamlit.app/" target="_blank">Live App</a>
+            <span> | </span>
+            <a href="https://github.com/artyomashigov/ml-in-prod" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project" style="position: relative; padding-top: 2.1rem;">
+            <div style="position: absolute; top: 18px; right: 24px; display: flex; gap: 8px;">
+                <span style="font-size: 12px; font-weight: bold; background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; border-radius: 6px; padding: 6px 10px;">
+                    Data Analytics
+                </span>
             </div>
-            <div class="project">
-                <h3>Analysis of Stolen Vehicles in New Zealand</h3>
-                <p>Performed data analysis in <strong>R programming language</strong> on stolen vehicle data from New Zealand. The project examined theft patterns by weekday, vehicle type, region, color, vehicle age, and population density, with visualizations and insights to support conclusions.</p>
-                <a href="https://rpubs.com/artyomashigov/stolen_vehicles" target="_blank">View Project Article</a>
+
+            <h3>Analysis of Stolen Vehicles in New Zealand</h3>
+            <p>Performed data analysis in <strong>R programming language</strong> on stolen vehicle data from New Zealand. The project examined theft patterns by weekday, vehicle type, region, color, vehicle age, and population density, with visualizations and insights to support conclusions.</p>
+            <a href="https://rpubs.com/artyomashigov/stolen_vehicles" target="_blank">View Project Article</a>
+        </div>
+
+        <div class="project" style="position: relative; padding-top: 2.1rem;">
+            <div style="position: absolute; top: 18px; right: 24px; display: flex; gap: 8px;">
+                <span style="font-size: 12px; font-weight: bold; background: #f3e8ff; color: #7e22ce; border: 1px solid #d8b4fe; border-radius: 6px; padding: 6px 10px;">
+                    DevOps
+                </span>
+                <span style="font-size: 12px; font-weight: bold; background: #f0fdfa; color: #0f766e; border: 1px solid #5eead4; border-radius: 6px; padding: 6px 10px;">
+                    Data Engineering
+                </span>
+                <span style="font-size: 12px; font-weight: bold; background: #eff6ff; color: #1d4ed8; border: 1px solid #93c5fd; border-radius: 6px; padding: 6px 10px;">
+                    MLOps
+                </span>
             </div>
-            <div class="project">
-                <h3>CI/CD Pipeline with GitHub Actions and AWS EC2</h3>
-                <p>Built a CI/CD project using <strong>GitHub Actions</strong>, a <strong>self-hosted runner on AWS EC2</strong>, <strong>Docker</strong>, <strong>FastAPI</strong>, and <strong>pytest</strong>. The pipeline automatically builds the app, runs tests, and redeploys the latest version to the server after each code push.</p>
-                <a href="https://medium.com/@artyomashigov/building-a-ci-cd-pipeline-with-github-actions-and-a-self-hosted-runner-on-aws-ec2-0e04dcc8e00f" target="_blank">View Project Article</a>
-                <span> | </span>
-                <a href="https://github.com/artyomashigov/ci_cd_test" target="_blank">View on GitHub</a>
+
+            <h3>CI/CD Pipeline with GitHub Actions and AWS EC2</h3>
+            <p>Built a CI/CD project using <strong>GitHub Actions</strong>, a <strong>self-hosted runner on AWS EC2</strong>, <strong>Docker</strong>, <strong>FastAPI</strong>, and <strong>pytest</strong>. The pipeline automatically builds the app, runs tests, and redeploys the latest version to the server after each code push.</p>
+            <a href="https://medium.com/@artyomashigov/building-a-ci-cd-pipeline-with-github-actions-and-a-self-hosted-runner-on-aws-ec2-0e04dcc8e00f" target="_blank">View Project Article</a>
+            <span> | </span>
+            <a href="https://github.com/artyomashigov/ci_cd_test" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project" style="position: relative; padding-top: 2.1rem;">
+            <div style="position: absolute; top: 18px; right: 24px; display: flex; gap: 8px;">
+                <span style="font-size: 12px; font-weight: bold; background: #ecfdf5; color: #047857; border: 1px solid #6ee7b7; border-radius: 6px; padding: 6px 10px;">
+                    Machine Learning
+                </span>
+                <span style="font-size: 12px; font-weight: bold; background: #f0fdfa; color: #0f766e; border: 1px solid #5eead4; border-radius: 6px; padding: 6px 10px;">
+                    Data Engineering
+                </span>
+                <span style="font-size: 12px; font-weight: bold; background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; border-radius: 6px; padding: 6px 10px;">
+                    Data Analytics
+                </span>
             </div>
-            <div class="project">
-                <h3>Sentiment Analysis of the Top Armenian Banks</h3>
-                <p>Developed a sentiment analysis project in <strong>Python</strong> using web scraping, <strong>AWS Translate</strong>, <strong>AWS Comprehend</strong>, and <strong>AWS S3</strong> to analyze news articles from leading Armenian banks. The project explored public sentiment across institutions through multilingual text processing, cloud-based analysis, and visualizations.</p>
-                <a href="https://medium.com/@artyomashigov/decoding-public-trust-sentiment-analysis-of-the-top-armenian-banks-f5544561f3bf" target="_blank">View Project Article</a>
-                <span> | </span>
-                <a href="https://github.com/artyomashigov/armenian_top_banks" target="_blank">View on GitHub</a>
+
+            <h3>Sentiment Analysis of the Top Armenian Banks</h3>
+            <p>Developed a sentiment analysis project in <strong>Python</strong> using web scraping, <strong>AWS Translate</strong>, <strong>AWS Comprehend</strong>, and <strong>AWS S3</strong> to analyze news articles from leading Armenian banks. The project explored public sentiment across institutions through multilingual text processing, cloud-based analysis, and visualizations.</p>
+            <a href="https://medium.com/@artyomashigov/decoding-public-trust-sentiment-analysis-of-the-top-armenian-banks-f5544561f3bf" target="_blank">View Project Article</a>
+            <span> | </span>
+            <a href="https://github.com/artyomashigov/armenian_top_banks" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project" style="position: relative; padding-top: 2.1rem;">
+            <div style="position: absolute; top: 18px; right: 24px; display: flex; gap: 8px;">
+                <span style="font-size: 12px; font-weight: bold; background: #f0fdfa; color: #0f766e; border: 1px solid #5eead4; border-radius: 6px; padding: 6px 10px;">
+                    Data Engineering
+                </span>
+                <span style="font-size: 12px; font-weight: bold; background: #eef2ff; color: #4338ca; border: 1px solid #a5b4fc; border-radius: 6px; padding: 6px 10px;">
+                    Business Intelligence
+                </span>
             </div>
-            <div class="project">
-                <h3>Serverless Market Data Pipeline on AWS</h3>
-                <p>Built an end-to-end <strong>serverless AWS data pipeline</strong> that ingests stock market data from an external API using <strong>AWS Lambda</strong>, stores raw JSON in <strong>Amazon S3</strong>, transforms nested data with <strong>AWS Glue</strong>, exposes curated Parquet data through <strong>Amazon Athena</strong>, and visualizes the final dataset in <strong>Power BI</strong>. The pipeline is orchestrated with <strong>AWS Step Functions</strong> and scheduled automatically with <strong>Amazon EventBridge</strong>.</p>
-                <a href="https://medium.com/@artyomashigov/end-to-end-aws-data-pipeline-lambda-glue-step-functions-and-athena-in-practice-b5a803b003af" target="_blank">View Project Article</a>
-                <span> | </span>
-                <a href="https://github.com/artyomashigov/aws-market-data-pipeline" target="_blank">View on GitHub</a>
+
+            <h3>Serverless Market Data Pipeline on AWS</h3>
+            <p>Built an end-to-end <strong>serverless AWS data pipeline</strong> that ingests stock market data from an external API using <strong>AWS Lambda</strong>, stores raw JSON in <strong>Amazon S3</strong>, transforms nested data with <strong>AWS Glue</strong>, exposes curated Parquet data through <strong>Amazon Athena</strong>, and visualizes the final dataset in <strong>Power BI</strong>. The pipeline is orchestrated with <strong>AWS Step Functions</strong> and scheduled automatically with <strong>Amazon EventBridge</strong>.</p>
+            <a href="https://medium.com/@artyomashigov/end-to-end-aws-data-pipeline-lambda-glue-step-functions-and-athena-in-practice-b5a803b003af" target="_blank">View Project Article</a>
+            <span> | </span>
+            <a href="https://github.com/artyomashigov/aws-market-data-pipeline" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project" style="position: relative; padding-top: 2.1rem;">
+            <div style="position: absolute; top: 18px; right: 24px; display: flex; gap: 8px;">
+                <span style="font-size: 12px; font-weight: bold; background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; border-radius: 6px; padding: 6px 10px;">
+                    Data Analytics
+                </span>
             </div>
-            <div class="project">
-                <h3>Business Aviation CO₂ Emissions Analysis</h3>
-                <p>Developed a Python-based analysis to estimate CO₂ emissions for business aviation flights. Implemented a multi-source fuel burn estimation approach using a 4-level fallback cascade (internal benchmarks, industry reports, public datasets, and aircraft-level approximations) to maximize data coverage.</p>
-                <p>Handled incomplete flight data by calculating distances using the <strong>Haversine formula</strong> and deriving missing flight times based on aircraft cruise speeds. The project focused on building a reliable and scalable methodology for emissions estimation in real-world, imperfect datasets.</p>
-                <p><em>Based on proprietary data, no public dataset available.</em></p>
+
+            <h3>Business Aviation CO₂ Emissions Analysis</h3>
+            <p>Developed a Python-based analysis to estimate CO₂ emissions for business aviation flights. Implemented a multi-source fuel burn estimation approach using a 4-level fallback cascade (internal benchmarks, industry reports, public datasets, and aircraft-level approximations) to maximize data coverage.</p>
+            <p>Handled incomplete flight data by calculating distances using the <strong>Haversine formula</strong> and deriving missing flight times based on aircraft cruise speeds. The project focused on building a reliable and scalable methodology for emissions estimation in real-world, imperfect datasets.</p>
+            <p><em>Based on proprietary data, no public dataset available.</em></p>
+        </div>
+
+        <div class="project" style="position: relative; padding-top: 2.1rem;">
+            <div style="position: absolute; top: 18px; right: 24px; display: flex; gap: 8px;">
+                <span style="font-size: 12px; font-weight: bold; background: #eef2ff; color: #4338ca; border: 1px solid #a5b4fc; border-radius: 6px; padding: 6px 10px;">
+                    Business Intelligence
+                </span>
+                <span style="font-size: 12px; font-weight: bold; background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; border-radius: 6px; padding: 6px 10px;">
+                    Data Analytics
+                </span>
             </div>
-            <div class="project">
-                <h3>UK Bank Customer Demographics & Financial Analysis</h3>
-                <p>Developed an interactive <strong>Tableau</strong> dashboard with story-driven navigation to analyze customer demographics and financial behavior across UK regions. The project explored regional distribution, balance segmentation, age and gender patterns, and job classification to uncover insights into customer profiles. Implemented dynamic filters and storytelling views to highlight key trends such as regional demographic differences and customer segmentation.</p>
-                <a href="https://public.tableau.com/app/profile/artyom.ashigov/viz/UKBankCustomers_17350829750340/CustomerSegmentation" target="_blank">View Interactive Dashboard</a>
+
+            <h3>UK Bank Customer Demographics & Financial Analysis</h3>
+            <p>Developed an interactive <strong>Tableau</strong> dashboard with story-driven navigation to analyze customer demographics and financial behavior across UK regions. The project explored regional distribution, balance segmentation, age and gender patterns, and job classification to uncover insights into customer profiles. Implemented dynamic filters and storytelling views to highlight key trends such as regional demographic differences and customer segmentation.</p>
+            <a href="https://public.tableau.com/app/profile/artyom.ashigov/viz/UKBankCustomers_17350829750340/CustomerSegmentation" target="_blank">View Interactive Dashboard</a>
+        </div>
+
+        <div class="project" style="position: relative; padding-top: 2.1rem;">
+            <div style="position: absolute; top: 18px; right: 24px; display: flex; gap: 8px;">
+                <span style="font-size: 12px; font-weight: bold; background: #eef2ff; color: #4338ca; border: 1px solid #a5b4fc; border-radius: 6px; padding: 6px 10px;">
+                    Business Intelligence
+                </span>
+                <span style="font-size: 12px; font-weight: bold; background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; border-radius: 6px; padding: 6px 10px;">
+                    Data Analytics
+                </span>
             </div>
-            <div class="project">
-                <h3>Bike Usage & Weather Impact Analysis</h3>
-                <p>Built an interactive <strong>Tableau</strong> dashboard to analyze bike usage patterns, station activity, rider demographics, and weather impact. The project explored monthly trip trends, top stations by trip volume, geographic trip distribution, age distribution, and customer versus subscriber behavior to identify usage patterns and support operational insights.</p>
-                <a href="https://public.tableau.com/app/profile/artyom.ashigov/viz/DivvyBikeUsageWeatherImpactAnalysis/BikeUsageWeatherImpactAnalysis" target="_blank">View Interactive Dashboard</a>
+
+            <h3>Bike Usage & Weather Impact Analysis</h3>
+            <p>Built an interactive <strong>Tableau</strong> dashboard to analyze bike usage patterns, station activity, rider demographics, and weather impact. The project explored monthly trip trends, top stations by trip volume, geographic trip distribution, age distribution, and customer versus subscriber behavior to identify usage patterns and support operational insights.</p>
+            <a href="https://public.tableau.com/app/profile/artyom.ashigov/viz/DivvyBikeUsageWeatherImpactAnalysis/BikeUsageWeatherImpactAnalysis" target="_blank">View Interactive Dashboard</a>
+        </div>
+
+        <div class="project" style="position: relative; padding-top: 2.1rem;">
+            <div style="position: absolute; top: 18px; right: 24px; display: flex; gap: 8px;">
+                <span style="font-size: 12px; font-weight: bold; background: #eef2ff; color: #4338ca; border: 1px solid #a5b4fc; border-radius: 6px; padding: 6px 10px;">
+                    Business Intelligence
+                </span>
+                <span style="font-size: 12px; font-weight: bold; background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; border-radius: 6px; padding: 6px 10px;">
+                    Data Analytics
+                </span>
             </div>
-            <div class="project">
-                <h3>Operational & Pricing Analytics in Delivery Business</h3>
-                <p>Completed a data analysis case study involving <strong>SQL</strong> querying and <strong>Tableau</strong> visualization to evaluate delivery performance, pricing behavior, and operational efficiency. Built a suite of interactive dashboards analyzing order volume, delivery time, pricing distribution, and store-level performance. Identified key insights such as peak demand hours, delivery time variability across stores, and pricing behavior across regions, supporting data-driven decision making.</p>
-                <a href="https://public.tableau.com/app/profile/artyom.ashigov/viz/DeliveryPerformance_16743182430800/OrderDeliveryPerformanceTrends" target="_blank">View Interactive Dashboards</a>
-            </div>
+
+            <h3>Operational & Pricing Analytics in Delivery Business</h3>
+            <p>Completed a data analysis case study involving <strong>SQL</strong> querying and <strong>Tableau</strong> visualization to evaluate delivery performance, pricing behavior, and operational efficiency. Built a suite of interactive dashboards analyzing order volume, delivery time, pricing distribution, and store-level performance. Identified key insights such as peak demand hours, delivery time variability across stores, and pricing behavior across regions, supporting data-driven decision making.</p>
+            <a href="https://public.tableau.com/app/profile/artyom.ashigov/viz/DeliveryPerformance_16743182430800/OrderDeliveryPerformanceTrends" target="_blank">View Interactive Dashboards</a>
+        </div>
+
         </section>
 
         <section class="contact" data-aos="fade-up">
