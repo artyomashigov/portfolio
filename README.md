@@ -1,2 +1,10 @@
 # Portfolio
-This repository contains my portfolio projects, showcasing my skills and experience.
+
+Portfolio repository for selected data, analytics, and engineering projects.
+
+## Focus Areas
+
+- Data analysis
+- Data engineering
+- Machine learning
+- Cloud and deployment practice
