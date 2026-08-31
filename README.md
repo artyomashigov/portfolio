@@ -8,3 +8,5 @@ Portfolio repository for selected data, analytics, and engineering projects.
 - Data engineering
 - Machine learning
 - Cloud and deployment practice
+
+Link: https://artyomashigov.github.io/portfolio/
